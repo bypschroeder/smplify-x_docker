@@ -22,7 +22,6 @@ RUN mkdir /vposer && wget -O /vposer/V02_05.zip "https://www.dropbox.com/scl/fi/
 
 WORKDIR /smplify-x
 RUN git clone https://github.com/KyujinHan/Smplify-X-Perfect-Implementation . && \
-    cd Smplify-X-Perfect-Implementation && \
     pip install -r requirements.txt || true
 
 RUN pip install --no-cache-dir configargparse omegaconf loguru
