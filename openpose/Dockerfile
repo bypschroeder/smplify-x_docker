@@ -33,7 +33,7 @@ RUN wget -O /openpose/models/hand/pose_iter_584000.caffemodel "https://www.dropb
     wget -O /openpose/models/pose/body_25/pose_iter_584000.caffemodel "https://www.dropbox.com/scl/fi/pfl1nonefgd2r3w42e2ij/pose_iter_584000.caffemodel?rlkey=hnj53tdg47d4fzgm9fz967tnb&st=hsgm207a&dl=1" && \
     wget -O /openpose/models/face/pose_iter_116000.caffemodel "https://www.dropbox.com/scl/fi/0i0z2fq8o3d75irw8sube/pose_iter_116000.caffemodel?rlkey=mux887c03dr4xtdjwxg0a5n5i&st=yodcb89a&dl=1"
 
-RUN sed -i 's/execute_process(COMMAND git checkout master WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}\/3rdparty\/caffe)/execute_process(COMMAND git checkout f019d0dfe86f49d1140961f8c7dec22130c83154 WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}\/3rdparty\/caffe)/g' openpose/CMakeLists.txt
+RUN sed -i 's/execute_process(COMMAND git checkout master WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}\/3rdparty\/caffe)/execute_process(COMMAND git checkout f019d0dfe86f49d1140961f8c7dec22130c83154 WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}\/3rdparty\/caffe)/g' /openpose/CMakeLists.txt
 
 WORKDIR /openpose/build
 RUN cmake .. -DUSE_CUDNN=OFF && make -j`nproc`
