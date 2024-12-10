@@ -17,6 +17,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     libgoogle-glog-dev \
     liblmdb-dev \
     opencl-headers \
+    libopencv-dev \
     ocl-icd-opencl-dev \
     libviennacl-dev && \
     apt-get clean
