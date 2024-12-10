@@ -30,7 +30,7 @@ ENV PATH="/usr/local/cmake-3.13.0-Linux-x86_64/bin:${PATH}"
 WORKDIR /openpose
 RUN git clone --depth 1 https://github.com/CMU-Perceptual-Computing-Lab/openpose.git .
 
-RUN wget -O /openpose/models/hand/pose_iter_584000.caffemodel "https://www.dropbox.com/scl/fi/the6q2tj5m215cxq85mko/pose_iter_102000.caffemodel?rlkey=hiasv5euzdg1gzyda5h7fcwvi&st=96mbr3af&dl=1"  && \
+RUN wget -O /openpose/models/hand/pose_iter_102000.caffemodel "https://www.dropbox.com/scl/fi/the6q2tj5m215cxq85mko/pose_iter_102000.caffemodel?rlkey=hiasv5euzdg1gzyda5h7fcwvi&st=96mbr3af&dl=1"  && \
     wget -O /openpose/models/pose/body_25/pose_iter_584000.caffemodel "https://www.dropbox.com/scl/fi/pfl1nonefgd2r3w42e2ij/pose_iter_584000.caffemodel?rlkey=hnj53tdg47d4fzgm9fz967tnb&st=hsgm207a&dl=1" && \
     wget -O /openpose/models/face/pose_iter_116000.caffemodel "https://www.dropbox.com/scl/fi/0i0z2fq8o3d75irw8sube/pose_iter_116000.caffemodel?rlkey=mux887c03dr4xtdjwxg0a5n5i&st=yodcb89a&dl=1"
 
