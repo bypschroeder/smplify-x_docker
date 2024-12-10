@@ -25,7 +25,7 @@ sudo docker build -t openpose .
 ### Start docker env
 
 ```bash
-sudo docker run --gpus all --name openpose -it openpose_v1:latest /bin/bash
+sudo docker run --gpus all --name openpose -it openpose:latest /bin/bash
 ```
 
 ### Example usage
