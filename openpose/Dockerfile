@@ -31,7 +31,7 @@ WORKDIR /openpose
 RUN git clone --depth 1 https://github.com/CMU-Perceptual-Computing-Lab/openpose.git .
 
 COPY openpose_models.zip /openpose/models/
-RUN unzip -n openpose_models.zip -d /openpose/models/ && \ 
+RUN unzip -n /openpose/models/openpose_models.zip -d /openpose/models/ && \ 
     mv /openpose/models/pose_iter_102000.caffemodel /openpose/models/hand && \
     mv /openpose/models/pose_iter_584000.caffemodel /openpose/models/pose/body_25 && \
     mv /openpose/models/pose_iter_116000.caffemodel /openpose/models/face && \
