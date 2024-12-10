@@ -16,8 +16,9 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     libgflags-dev \
     libgoogle-glog-dev \
     liblmdb-dev \
-    opencl-headers \
     libopencv-dev \
+    libboost-all-dev \
+    opencl-headers \
     ocl-icd-opencl-dev \
     libviennacl-dev && \
     apt-get clean
