@@ -1,4 +1,4 @@
-FROM python:3.9.21-slim
+FROM nvidia/cuda:11.6.1-cudnn8-devel-ubuntu20.04
 
 WORKDIR /smplify-x
 RUN apt-get update && apt-get install -y --no-install-recommends \
