@@ -11,13 +11,13 @@ A docker build file for SMPLify-x.
 ### Build the image using the Dockerfile
 ```bash
 cd ./smplify-x
-sudo docker build -t smplifyx .
+sudo docker build -t smplify-x .
 ```
 
 ### Start docker env
 
 ```bash
-sudo docker run --gpus all --name smplifyx -it smplifyx:latest /bin/bash
+sudo docker run --gpus all --name smplifyx -it smplify-x:latest /bin/bash
 ```
 
 ### Example usage

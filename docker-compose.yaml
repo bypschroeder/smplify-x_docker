@@ -10,11 +10,11 @@ services:
     volumes:
       - shared_data:/shared
     tty: true
-  smplifyx:
+  smplify-x:
     build:
       context: ./smplify-x
-    image: smplifyx:latest
-    container_name: smplifyx:latest
+    image: smplify-x:latest
+    container_name: smplify-x
     runtime: nvidia
     environment:
       - NVIDIA_VISIBLE_DEVICES=all
