@@ -16,8 +16,8 @@ services:
   smplify-x:
     build:
       context: ./smplify-x
-    image: smplify-x:latest
-    container_name: smplify-x:latest
+    image: smplifyx:latest
+    container_name: smplifyx:latest
     runtime: nvidia
     environment:
       - NVIDIA_VISIBLE_DEVICES=all
