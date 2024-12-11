@@ -32,5 +32,5 @@ sudo docker run --gpus all --name openpose -it openpose:latest /bin/bash
 
 ```bash
 cd openpose # It is important to be in the root directory
-./build/examples/openpose/openpose.bin --image_dir {PATH_TO_IMAGES} --write_json {OUTPUT_PATH_JSON} --face --hand --display 0 --write_images {OUTPUT_PATH_IMAGES}
+./build/examples/openpose/openpose.bin --image_dir ../shared/data/images/ --write_json ../shared/data/keypoints/ --face --hand --display 0 --write_images ../shared/data/openpose_images/
 ```

@@ -23,5 +23,6 @@ sudo docker run --gpus all --name smplifyx -it smplify-x:latest /bin/bash
 ### Example usage
 
 ```bash
-python3 /smplify-x/smplifyx/main.py --config /smplify-x/cfg_files/fit_smplx.yaml --data_folder /data --output_folder /data/smplify-x_results --visualize=False --gender="male" --model_folder /smplx/models --vposer_ckpt /vposer/V02_05 --part_segm_fn smplx_parts_segm.pkl
+cd /smplify-x
+python3 smplifyx/main.py --config cfg_files/fit_smplx.yaml --data_folder ../shared/data/ --output_folder ../shared/data/smplify-x_results --visualize=False --gender="male" --model_folder ../smplx/models --vposer_ckpt ../vposer/V02_05
 ```
