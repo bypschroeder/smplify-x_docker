@@ -2,6 +2,8 @@ FROM nvidia/cuda:11.6.1-cudnn8-devel-ubuntu20.04
 
 WORKDIR /smplify-x
 RUN apt-get update && apt-get install -y --no-install-recommends \
+    python3-dev \
+    python3-pip \
     git \
     unzip \
     build-essential \
@@ -11,7 +13,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     apt-get clean
 
 WORKDIR /smplx
-RUN pip install --no-cache-dir chumpy smplx[all] \
+RUN pip3 install --no-cache-dir chumpy smplx[all] \
     git+https://github.com/nghorbani/configer \
     git+https://github.com/nghorbani/human_body_prior
 
@@ -24,6 +26,6 @@ RUN mkdir /vposer && wget -O /vposer/V02_05.zip "https://www.dropbox.com/scl/fi/
 
 WORKDIR /smplify-x
 RUN git clone https://github.com/KyujinHan/Smplify-X-Perfect-Implementation . && \
-    pip install -r requirements.txt || true
+    pip3 install -r requirements.txt || true
 
-RUN pip install --no-cache-dir configargparse omegaconf loguru
+RUN pip3 install --no-cache-dir configargparse omegaconf loguru
