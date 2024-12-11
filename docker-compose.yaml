@@ -1,0 +1,30 @@
+version: '3.9'
+
+services:
+  openpose:
+    build:
+      context: ./openpose
+    image: openpose:latest
+    container_name: openpose
+    runtime: nvidia
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=all
+    volumes:
+      - shared_data:/shared
+    tty: true
+
+  smplify-x:
+    build:
+      context: ./smplify-x
+    image: smplify-x:latest
+    container_name: smplify-x:latest
+    runtime: nvidia
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=all
+    volumes:
+      - shared_data:/shared
+    tty: true
+
+volumes:
+  shared_data:
+    driver: local
