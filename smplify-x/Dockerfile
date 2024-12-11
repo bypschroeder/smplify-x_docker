@@ -1,4 +1,4 @@
-FROM nvidia/cuda:11.6.1-cudnn8-devel-ubuntu20.04
+FROM python:3.9.21-slim
 
 ENV DEBIAN_FRONTEND=noninteractive
 
