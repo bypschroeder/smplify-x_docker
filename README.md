@@ -15,7 +15,7 @@ docker-compose up --build
 
 To run:
 ```bash
-docker-compose up -
+docker-compose up 
 ```
 
 To run OpenPose or SMPLify-X, navigate to the respective container. For detailed instructions, refer to ```smplify-x/README.md``` and ```openpose/README.md```.
