@@ -1,5 +1,3 @@
-version: '3.9'
-
 services:
   openpose:
     build:
@@ -12,8 +10,7 @@ services:
     volumes:
       - shared_data:/shared
     tty: true
-
-  smplify-x:
+  smplifyx:
     build:
       context: ./smplify-x
     image: smplifyx:latest
