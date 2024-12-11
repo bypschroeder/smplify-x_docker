@@ -18,7 +18,7 @@ RUN pip3 install --no-cache-dir chumpy smplx[all] \
     git+https://github.com/nghorbani/human_body_prior
 
 RUN git clone https://github.com/vchoutas/smplx . && \
-    python setup.py install
+    python3 setup.py install
 RUN wget -O /smplx/models_smplx_v1_1.zip "https://www.dropbox.com/scl/fi/sq5tzk1stcmjn6e3iadi6/models_smplx_v1_1.zip?rlkey=bjou496ef97zbfc0j0bslxjeg&st=lu588o61&dl=1" && \
     unzip -n /smplx/models_smplx_v1_1.zip -d /smplx
 RUN mkdir /vposer && wget -O /vposer/V02_05.zip "https://www.dropbox.com/scl/fi/iikqr1ocfthtptmfo2cjz/V02_05.zip?rlkey=gj0jlwruni7tfaf556n9pieuz&st=b2onbhct&dl=1" && \
